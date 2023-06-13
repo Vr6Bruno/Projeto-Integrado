@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<architect-project version="1.0" appversion="1.0.9">
+ <project-name>PI_BT</project-name>
+ <print-settings numCopies="1" zoom="1.0" pageNumbersPrinted="true" orientation="1" paperWidth="612.0" paperHeight="792.0" leftBorder="50.0" rightBorder="50.0" topBorder="50.0" bottomBorder="50.0" />
+ <project-data-sources>
+  <data-source id="DS0">
+   <property key="Logical" value="PlayPen Database" />
+  </data-source>
+ </project-data-sources>
+ <source-databases>
+ </source-databases>
+ <target-database id="ppdb" dbcs-ref="DS0">
+  <table id="TAB1" populated="true" UUID="c9104ea1-0c35-4818-89c9-13c6cf449e70" name="alunos" objectType="TABLE" physicalName="alunos" >
+   <remarks>Tabela referente aos alunos.</remarks>
+   <folder id="FOLTAB11" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL2" populated="true" UUID="d666d945-4da2-4c6f-bec1-083c58a4cf90" autoIncrement="false" autoIncrementSequenceName="alunos_matricula_pk_seq" defaultValue="" name="matricula" nullable="0" physicalName="matricula_pk" precision="10" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks>Número de matrícula dos alunos.</remarks>
+    </column>
+    <column id="COL3" populated="true" UUID="2641cdb9-4e47-4c2e-902a-8f33328f7709" autoIncrement="false" autoIncrementSequenceName="alunos_nome_aluno_seq" defaultValue="" name="nome_aluno" nullable="0" physicalName="nome_aluno" precision="255" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks>Nome dos alunos.</remarks>
+    </column>
+    <column id="COL4" populated="true" UUID="00da91f4-d76e-4ec0-bf88-7aa5f455af43" autoIncrement="false" autoIncrementSequenceName="alunos_email_seq" defaultValue="" name="email" nullable="0" physicalName="email" precision="255" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks>Email dos alunos.</remarks>
+    </column>
+    <column id="COL5" populated="true" UUID="841e8af1-2ee0-4dae-8b41-e94c93a6d2fe" autoIncrement="false" autoIncrementSequenceName="alunos_curso_seq" defaultValue="" name="curso" nullable="0" physicalName="curso" precision="40" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks>Curso dos alunos.</remarks>
+    </column>
+    <column id="COL6" populated="true" UUID="da69dba6-403d-4b53-ad26-f07d355e8d4a" autoIncrement="false" autoIncrementSequenceName="alunos_endereco_seq" defaultValue="" name="endereco" nullable="0" physicalName="endereco" precision="512" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks>Endereço dos alunos.</remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB13" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB12" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB14" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX7" populated="true" UUID="dc2dd65b-adc2-4065-a167-637dbeeabf65" clustered="false" name="nome_aluno_pk" physicalName="nome_aluno_pk" primaryKeyIndex="true" unique="false" >
+     <index-column id="IDC8" populated="true" UUID="4715bd15-1e69-49f8-ba84-1f936e5eedda" ascendingOrDescending="UNSPECIFIED" column-ref="COL2" name="matricula" physicalName="matricula_pk" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB9" populated="true" UUID="8351a0ca-efeb-4edd-b216-0139332b1429" name="certificados" objectType="TABLE" physicalName="certificados" >
+   <remarks>Tabela referente aos certificados enviados pelos alunos.</remarks>
+   <folder id="FOLTAB91" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL10" populated="true" UUID="56b0a82a-a42a-4c87-9ab9-6876cb056425" autoIncrement="false" autoIncrementSequenceName="certificados_id_certificado_seq" defaultValue="" name="id_certificado" nullable="0" physicalName="id_certificado" precision="38" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="2" userDefinedTypeUUID="115245ce-612c-4d6a-b559-6dd903dd959a" >
+     <remarks>Número que identifica o certificado.</remarks>
+    </column>
+    <column id="COL11" populated="true" UUID="dceff515-0bfe-42ee-920f-f007371cff28" autoIncrement="false" autoIncrementSequenceName="certificados_data_envio_seq" defaultValue="" name="data_envio" nullable="0" physicalName="data_envio" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="93" userDefinedTypeUUID="6497d8de-0e00-40d6-a42e-e2adca83be64" >
+     <remarks>Data que enviou o certificado.</remarks>
+    </column>
+    <column id="COL12" populated="true" UUID="bca9e015-596d-47e3-a6b7-df3c130eb31f" autoIncrement="false" autoIncrementSequenceName="certificados_materia_seq" defaultValue="" name="materia" nullable="0" physicalName="materia" precision="100" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks>Matéria dos certificados dos alunos.</remarks>
+    </column>
+    <column id="COL13" populated="true" UUID="53c91c81-68c8-46af-91e3-43cea5c40716" autoIncrement="false" autoIncrementSequenceName="certificados_situacao_seq" defaultValue="" name="situacao" nullable="0" physicalName="situacao" precision="15" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks>Situação do certificado: Aprovado, Pendente e Reprovado.</remarks>
+    </column>
+    <column id="COL14" populated="true" UUID="fbbfebd3-4fe7-4cd6-b95e-9cfedcbe37eb" autoIncrement="false" autoIncrementSequenceName="alunos_matricula_pk_seq" defaultValue="" name="matricula" nullable="0" physicalName="matricula_pk" precision="10" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks>Número de matrícula dos alunos.</remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB93" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB92" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB94" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX15" populated="true" UUID="01c0a31b-a053-4048-bb13-261a9b469f91" clustered="false" name="id_certificado_pk" physicalName="id_certificado_pk" primaryKeyIndex="true" unique="false" >
+     <index-column id="IDC16" populated="true" UUID="cb9bc388-79fd-4bce-acbe-ae44f32403a8" ascendingOrDescending="UNSPECIFIED" column-ref="COL10" name="id_certificado" physicalName="id_certificado" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB17" populated="true" UUID="96bda921-6b22-47b6-ace9-155103106dc0" name="coordenadores" objectType="TABLE" physicalName="coordenadores" >
+   <remarks>Tabela referente aos coordenadores.</remarks>
+   <folder id="FOLTAB171" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL18" populated="true" UUID="1d44e22e-b9c9-41c0-a1b2-aaeea924bebb" autoIncrement="false" autoIncrementSequenceName="coordenadores_id_coordenador_seq" defaultValue="" name="id_coordenador" nullable="0" physicalName="id_coordenador" precision="38" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="2" userDefinedTypeUUID="115245ce-612c-4d6a-b559-6dd903dd959a" >
+     <remarks>Número de identificação dos coordenadores.</remarks>
+    </column>
+    <column id="COL19" populated="true" UUID="01901c5b-c31e-4325-b5aa-10a5b89c7d22" autoIncrement="false" autoIncrementSequenceName="coordenadores_nome_coordenador_seq" defaultValue="" name="nome_coordenador" nullable="0" physicalName="nome_coordenador" precision="255" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks>Nome dos coordenadores.</remarks>
+    </column>
+    <column id="COL20" populated="true" UUID="67cbcaee-660e-4e15-8bc2-9601980f0292" autoIncrement="false" autoIncrementSequenceName="coordenadores_email_seq" defaultValue="" name="email" nullable="0" physicalName="email" precision="255" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks>Email de contato dos coordenadores.</remarks>
+    </column>
+    <column id="COL21" populated="true" UUID="b2badedc-c047-436e-8511-0c09f3ef8cbd" autoIncrement="false" autoIncrementSequenceName="certificados_id_certificado_seq" defaultValue="" name="id_certificado" nullable="0" physicalName="id_certificado" precision="38" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="2" userDefinedTypeUUID="115245ce-612c-4d6a-b559-6dd903dd959a" >
+     <remarks>Número que identifica o certificado.</remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB173" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB172" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB174" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX22" populated="true" UUID="90ec3149-47b6-4b00-9b9d-fdeaea30ad75" clustered="false" name="nome_coordenador_pk" physicalName="nome_coordenador_pk" primaryKeyIndex="true" unique="false" >
+     <index-column id="IDC23" populated="true" UUID="5742db6a-11fb-4a33-9099-0a4530fc7291" ascendingOrDescending="UNSPECIFIED" column-ref="COL18" name="id_coordenador" physicalName="id_coordenador" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB24" populated="true" UUID="a6d704e4-552e-457d-a1a5-885d81d736d1" name="login" objectType="TABLE" physicalName="login" >
+   <remarks>Tabela referente ao login dos alunos e coordenadores.</remarks>
+   <folder id="FOLTAB241" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL25" populated="true" UUID="0308cdea-f359-42e5-bf28-5c6a18045f5e" autoIncrement="false" autoIncrementSequenceName="alunos_matricula_pk_seq" defaultValue="" name="matricula" nullable="0" physicalName="matricula_pk" precision="10" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks>Número de matrícula dos alunos.</remarks>
+    </column>
+    <column id="COL26" populated="true" UUID="e012706b-b3db-49c8-9928-cd7545ab6442" autoIncrement="false" autoIncrementSequenceName="coordenadores_id_coordenador_seq" defaultValue="" name="id_coordenador" nullable="0" physicalName="id_coordenador" precision="38" primaryKeySeq="1" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="2" userDefinedTypeUUID="115245ce-612c-4d6a-b559-6dd903dd959a" >
+     <remarks>Número de identificação dos coordenadores.</remarks>
+    </column>
+    <column id="COL27" populated="true" UUID="830c3542-1594-4132-ac3a-5d6158aaa5eb" autoIncrement="false" autoIncrementSequenceName="login_senha_coordenador_seq" defaultValue="" name="senha_coordenador" nullable="0" physicalName="senha_coordenador" precision="20" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks>Senha de acesso dos coordenadores.</remarks>
+    </column>
+    <column id="COL28" populated="true" UUID="70552f41-c59c-44e8-961e-721702353df7" autoIncrement="false" autoIncrementSequenceName="login_senha_aluno_seq" defaultValue="" name="senha_aluno" nullable="0" physicalName="senha_aluno" precision="20" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks>Senha de acesso dos alunos.</remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB243" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB242" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB244" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX29" populated="true" UUID="05b68e0d-8ea7-47dd-9ab6-0654069f616b" clustered="false" name="matricula_id_coordenador_pk" physicalName="matricula_id_coordenador_pk" primaryKeyIndex="true" unique="false" >
+     <index-column id="IDC30" populated="true" UUID="e0b4728e-000d-4adc-bf31-a39438e6ebd1" ascendingOrDescending="UNSPECIFIED" column-ref="COL25" name="matricula" physicalName="matricula_pk" />
+     <index-column id="IDC31" populated="true" UUID="a5284215-0cb8-44ed-9138-020bce690cbc" ascendingOrDescending="UNSPECIFIED" column-ref="COL26" name="id_coordenador" physicalName="id_coordenador" />
+    </index>
+   </folder>
+  </table>
+  <relationships>
+   <relationship id="REL32" populated="true" UUID="44ce91af-21b2-4546-a6ce-4d15199dcf24" deferrability="7" deleteRule="3" fk-table-ref="TAB24" fkCardinality="7" identifying="true" name="alunos_login_fk" physicalName="alunos_login_fk" pk-table-ref="TAB1" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP33" populated="true" UUID="94125232-dc61-4b01-adc0-930eb172763b" fk-column-ref="COL25" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL2" />
+   </relationship>
+   <relationship id="REL34" populated="true" UUID="e7c57af7-4f4b-46c7-9970-e855b521164c" deferrability="7" deleteRule="3" fk-table-ref="TAB9" fkCardinality="7" identifying="false" name="alunos_certificados_fk" physicalName="alunos_certificados_fk" pk-table-ref="TAB1" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP35" populated="true" UUID="36bdc487-9e6d-4550-9373-f01f9107d248" fk-column-ref="COL14" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL2" />
+   </relationship>
+   <relationship id="REL36" populated="true" UUID="0515fe46-9425-497a-929a-5aefa36de093" deferrability="7" deleteRule="3" fk-table-ref="TAB17" fkCardinality="7" identifying="false" name="certificados_coordenadores_fk" physicalName="certificados_coordenadores_fk" pk-table-ref="TAB9" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP37" populated="true" UUID="f8ccffa3-837f-47ea-ba81-d5ce0c5aa43a" fk-column-ref="COL21" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL10" />
+   </relationship>
+   <relationship id="REL38" populated="true" UUID="02a71304-2156-4951-8671-404e0897ca63" deferrability="7" deleteRule="3" fk-table-ref="TAB24" fkCardinality="7" identifying="true" name="coordenadores_login_fk" physicalName="coordenadores_login_fk" pk-table-ref="TAB17" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP39" populated="true" UUID="7c60bd7d-6f11-4c91-8c0e-b4899370f42a" fk-column-ref="COL26" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL18" />
+   </relationship>
+  </relationships>
+ </target-database>
+ <ddl-generator type="ca.sqlpower.architect.ddl.GenericDDLGenerator" allow-connection="true"> </ddl-generator>
+ <liquibase-settings useSeparateChangeSets="false" generateId="false" idStart="1"/>
+ <create-kettle-job-settings filePath="" jobName="" schemaName="" kettleJoinType="0" savingToFile="true" />
+ <play-pen zoom="1.0" viewportX="0" viewportY="0" relationship-style="rectilinear" names-displayLogicalNames="true" showPrimaryTag="true" showForeignTag="true" showAlternateTag="true" columnVisibility="ALL" relationshipLabelVisibility="true">
+  <table-pane table-ref="TAB1" x="191" y="142" bgColor="0xeeeeee" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB9" x="1081" y="208" bgColor="0xeeeeee" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB17" x="1062" y="546" bgColor="0xeeeeee" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB24" x="256" y="563" bgColor="0xeeeeee" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-link relationship-ref="REL32" pkConnection="0.5970588235294118" fkConnection="0.45977011494252873" rLineColor="0x2e3436" pkLabelText="" fkLabelText="" orientation="132"/>
+  <table-link relationship-ref="REL38" pkConnection="0.6262626262626263" fkConnection="0.32051282051282054" rLineColor="0x2e3436" pkLabelText="" fkLabelText="" orientation="18"/>
+  <table-link relationship-ref="REL34" pkConnection="0.5460992907801419" fkConnection="0.44680851063829785" rLineColor="0x2e3436" pkLabelText="" fkLabelText="" orientation="33"/>
+  <table-link relationship-ref="REL36" pkConnection="0.39296187683284456" fkConnection="0.5842696629213483" rLineColor="0x2e3436" pkLabelText="" fkLabelText="" orientation="132"/>
+ </play-pen>
+ <critic-manager>
+  <critic-grouping platformType="Generic" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.PrimaryKeyCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.RelationshipMappingTypeCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.EmptyRelationshipCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.AlphaNumericNameCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.AlphaNumericSequenceNameCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.SetDefaultOnColumnWithNoDefaultCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.SetNullOnNonNullableColumnCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.DuplicateNameCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="DB2" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.DB2UnsupportedFeaturesCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="H2" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.H2UnsupportedFeaturesCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="HSQLDB" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.HSQLDBUnsupportedFeaturesCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="MySQL" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.MySQLCommentCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.MySQLReservedWordsCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.MySQLUnsupportedFeaturesCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="Oracle" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.OraclePhysicalNameCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.OracleReservedWordsCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.OracleUnsupportedFeaturesCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="PostgreSQL" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.PostgreSQLReservedWordsCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="SQL Server" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.SQLServerUnsupportedFeaturesCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.SQLServerReservedWordsCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="SQL Server 2000" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.SQLServer2000UnsupportedFeaturesCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="SQL Server 2005" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.SQLServer2005UnsupportedFeaturesCritic" severity="ERROR"/>
+  </critic-grouping>
+ </critic-manager>
+ <profiles topNCount="10">
+  </profiles>
+  <olap>
+  </olap>
+  <olap-gui>
+  </olap-gui>
+</architect-project>
